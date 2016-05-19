@@ -275,4 +275,12 @@ if (!__DEV__) {
   )
 }
 
+// // *** Shim for Fetch *** //
+// ** Note ** this is only required if import 'whatwg-fetch' isn't working
+// webpackConfig.plugins.push(
+//   new webpack.ProvidePlugin({
+//     'fetch': 'imports?this=>global!exports?global.fetch!whatwg-fetch'
+//   })
+// );
+
 export default webpackConfig

@@ -1,4 +1,39 @@
-.activeRoute {
-  font-weight: bold;
-  text-decoration: underline;
+@import '../../styles/variables/colors';
+
+.headerWrap {
+  background-color: $white;
+  overflow: auto;
+  padding: 25px 30px;
+  position: relative;
+
+  img, .titleWrap {
+    display: inline-block;
+  }
+
+  img {
+    width: 55px;
+    height: auto;
+    margin-right: 20px;
+    vertical-align: bottom;
+  }
+
+  .titleWrap {
+    // vertical-align: top;
+
+    h1 {
+      color: $dark;
+      font-family: 'Roboto Slab', serif;
+      font-size: 25px;
+      margin: 0;
+    }
+
+    h2 {
+      color: $gray;
+      font-weight: normal;
+      font-size: 14px;
+      margin: 5px 0 0 0;
+    }
+  }
+
 }
+

@@ -1,18 +1,20 @@
-import React from 'react'
-import { IndexLink, Link } from 'react-router'
-import classes from './Header.scss'
+import React from 'react';
+import Nav from '../Nav';
+import classes from './Header.scss';
+import LogoImage from '../../static/logo_green.png';
 
 export const Header = () => (
-  <div>
-    <h1>React Redux Starter Kit</h1>
-    <IndexLink to='/' activeClassName={classes.activeRoute}>
-      Home
-    </IndexLink>
-    {' · '}
-    <Link to='/counter' activeClassName={classes.activeRoute}>
-      Counter
-    </Link>
+  <div className={classes.headerWrap}>
+    <img
+      alt={"Lending Loop"}
+      src={LogoImage}
+    />
+    <div className={classes.titleWrap}>
+      <h1>Loop Credit</h1>
+      <h2>The Best Predictor to Default</h2>
+    </div>
+    <Nav />
   </div>
-)
+);
 
-export default Header
+export default Header;

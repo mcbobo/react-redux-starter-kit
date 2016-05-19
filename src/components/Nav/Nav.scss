@@ -1,0 +1,65 @@
+@import '../../styles/variables/colors';
+@import '../../styles/components/simpleAnimations';
+
+$nav-bottom-spacing: 10px;
+$nav-border-thickness: 3px;
+$nav-link-spacing: 25px;
+
+// Bottom Border Active State Placeholder
+%nav-bottom-active {
+  width: 100%;
+  background-color: $green;
+}
+
+.nav {
+  bottom: 0;
+  padding-right: $nav-link-spacing;
+  position: absolute;
+  right: 0;
+
+  // Displaying what route is active
+  .activeRoute {
+    color: $green;
+  }
+
+  a {
+    display: inline-block;
+    font-size: 14.5px;
+    padding-left: $nav-link-spacing;
+    padding-right: $nav-link-spacing;
+    &:last-child { padding-right: $nav-link-spacing; }
+
+    &:hover {
+      color: $green;
+      transition: color .5s ease;
+    }
+
+    // ** Animate Bottom Border on Hover ** //
+
+    &:after{
+      content: '';
+      display: block;
+      width: 0px;
+      background: transparent;
+      transition: width .5s ease, background-color .5s ease;
+      //@extend %animated-bottom-border;
+      margin: $nav-bottom-spacing auto 0;
+      height: $nav-border-thickness;
+    }
+    &:hover:after, &.activeRoute:after  {
+      @extend %nav-bottom-active;
+    }
+  }
+
+  // Disable activeRoute hover when hovering over others
+  // But also enable when it's the one that's hovered
+  &:hover > .activeRoute:after {
+    width: 0;
+    background-color: transparent;
+  }
+  &:hover > .activeRoute:hover:after {
+    @extend %nav-bottom-active;
+  }
+}
+
+

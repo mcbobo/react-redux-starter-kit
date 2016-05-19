@@ -1,7 +1,7 @@
 {
-  "name": "react-redux-starter-kit",
-  "version": "3.0.0-alpha.0",
-  "description": "Get started with React, Redux, and React-Router!",
+  "name": "loop_credit-react_redux_rethink_koa",
+  "version": "1.0.0-alpha0",
+  "description": "The credit engine that will blow the world away",
   "main": "index.js",
   "engines": {
     "node": ">=4.2.0",
@@ -72,9 +72,9 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/davezuko/react-redux-starter-kit.git"
+    "url": ""
   },
-  "author": "David Zukowski <david@zuko.me> (http://zuko.me)",
+  "author": "Bo Li <bosupreme@gmail.com> (http://madebybo.com)",
   "license": "MIT",
   "dependencies": {
     "babel-cli": "^6.5.1",
@@ -96,13 +96,13 @@
     "fs-extra": "^0.30.0",
     "history": "^2.0.0",
     "html-webpack-plugin": "^2.7.1",
-    "imports-loader": "^0.6.5",
     "ip": "^1.1.2",
     "json-loader": "^0.5.4",
     "koa": "^2.0.0-alpha.3",
     "koa-connect-history-api-fallback": "^0.3.0",
     "koa-convert": "^1.2.0",
     "koa-proxy": "^0.6.0",
+    "koa-router": "^7.0.1",
     "koa-static": "^2.0.0",
     "node-sass": "^3.7.0",
     "normalize.css": "^4.1.1",
@@ -114,11 +114,14 @@
     "react-router-redux": "^4.0.0",
     "redux": "^3.0.0",
     "redux-thunk": "^2.0.0",
+    "request": "^2.72.0",
     "rimraf": "^2.5.1",
     "sass-loader": "^3.0.0",
     "style-loader": "^0.13.0",
+    "underscore": "^1.8.3",
     "url-loader": "^0.5.6",
     "webpack": "^1.12.14",
+    "whatwg-fetch": "^1.0.0",
     "yargs": "^4.0.0"
   },
   "devDependencies": {

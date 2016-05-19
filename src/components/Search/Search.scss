@@ -1,0 +1,67 @@
+@import '../../styles/variables/colors';
+
+//$cubic-bezier: cubic-bezier(.45, .13, .22, .95);
+$cubic-bezier: ease;
+
+@keyframes line-color-animation {
+  0%    { background-color: $green; }
+  50%   { background-color: $teal; }
+  100%  { background-color: $green; }
+}
+
+.search {}
+
+.searchWrap {
+  margin: 5% auto 0;
+  overflow: hidden;
+  transition: width .1s cubic-bezier;
+  width: 50%;
+
+  .searchIcon {
+    float: left;
+    height: auto;
+    margin-right: 15px;
+    vertical-align: bottom;
+    width: 30px;
+  }
+
+  .searchBarWrap {
+    overflow: hidden;
+
+    .searchBar {
+      background-color: transparent;
+      border: none;
+      color: $gray;
+      font-size: 20px;
+      outline: none;
+      width: 100%;
+    }
+
+    &.focused .searchFocusLine {
+      width: 100%;
+      background-color: $green;
+      //transition: width .5s $cubic-bezier;//, background-color .5s $cubic-bezier;
+      //animation: line-color-animation ease 1s infinite;
+    }
+
+    .searchFocusLine {
+      width: 0;
+      transition: width .5s $cubic-bezier, background-color .5s $cubic-bezier;
+      //TODO Extend
+      height: 2px;
+
+      &.focused {
+      }
+    }
+
+  }
+}
+
+.hasResults {
+  width: 100%;
+  margin: 0;
+}
+
+.resultsWrap {
+
+}

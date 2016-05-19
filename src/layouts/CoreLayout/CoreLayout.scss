@@ -1,3 +1,12 @@
+@import '../../styles/variables/colors';
+
 .mainContainer {
-  padding-top:20px;
+  background: $gray-bg;
+  margin: 0 auto;
+  min-height: 100%;
+  width: 1024px;
+}
+
+.bodyContainer {
+  padding: 40px;
 }

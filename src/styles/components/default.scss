@@ -1,0 +1,16 @@
+/*
+This stores all the default HTML component styling
+
+a, button
+
+Containers are in the core.scss file
+*/
+
+a {
+  color: $dark-gray;
+  text-decoration: none;
+  &:visited { color: $dark-gray; }
+  &:hover {
+    color: $green;
+  }
+}
