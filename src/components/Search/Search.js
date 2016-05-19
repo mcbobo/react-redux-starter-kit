@@ -25,7 +25,7 @@ export const Search = ({
           src={SearchIcon}
         />
         <div className={
-          `${classes.searchBarWrap} 
+          `${classes.searchBarWrap}
           ${classes[search.searchBarWrapClass]}`
         }>
           <input
@@ -37,7 +37,7 @@ export const Search = ({
             onChange={(ev => searchFromRails(ev.target.value))}
           />
           <div className={
-            `${classes.searchFocusLine} 
+            `${classes.searchFocusLine}
             ${classes[search.searchBarWrapClass]}`
           }></div>
         </div>
@@ -51,13 +51,13 @@ export const Search = ({
 
 // TODO Finish the proptype validation
 Search.propTypes = {
-  search: PropTypes.shape({
-    searchBarWrapClass: PropTypes.string.isRequired,
-    searchWrapClass: PropTypes.array.isRequired
+  search : PropTypes.shape({
+    searchBarWrapClass : PropTypes.string.isRequired,
+    searchWrapClass    : PropTypes.array.isRequired
   }).isRequired,
-  focusSearchBar: PropTypes.func.isRequired,
-  blurSearchBar: PropTypes.func.isRequired,
-  searchFromRails: PropTypes.func.isRequired
+  focusSearchBar  : PropTypes.func.isRequired,
+  blurSearchBar   : PropTypes.func.isRequired,
+  searchFromRails : PropTypes.func.isRequired
 };
 
 export default Search;

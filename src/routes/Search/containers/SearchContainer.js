@@ -12,15 +12,15 @@ import Search from 'components/Search';
 const focused = 'focused';
 
 const mapActionCreators = {
-  focusSearchBar:   () => setSearchBarWrapClass(focused),
-  blurSearchBar:    () => setSearchBarWrapClass(''),
   searchFromRails,
   searchingLoanApps,
-  receiveLoanApps
+  receiveLoanApps,
+  focusSearchBar : () => setSearchBarWrapClass(focused),
+  blurSearchBar  : () => setSearchBarWrapClass('')
 };
 
 const mapStateToProps = (state) => ({
-  search: state.search
+  search : state.search
 });
 
 export default connect(mapStateToProps, mapActionCreators)(Search);
